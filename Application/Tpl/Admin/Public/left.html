@@ -1,0 +1,42 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+	<div class="sidebar-collapse">
+		<ul class="nav" id="side-menu">
+			<li class="nav-header">
+				<div class="dropdown profile-element">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+						<span class="clear">
+							<span class="block m-t-xs">
+								<strong class="font-bold">{$userAdmin}</strong>
+							</span>
+							<span class="text-muted text-xs block">管理员
+								<b class="caret"></b>
+							</span>
+						</span>
+					</a>
+					<ul class="dropdown-menu animated fadeInRight m-t-xs">
+						<li>
+							<a href="{:U('Admin/Login/repwd')}">修改密码</a>
+						</li>
+						<li>
+							<a href="{:U('Admin/Login/logout')}">安全退出</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<li class='active'>
+				<a href="#">
+					<i class="fa fa-bar-chart-o"></i>
+					<span class="nav-label">素材管理</span>
+					<span class="fa arrow"></span>
+				</a>
+				<ul class="nav nav-second-level">
+					<li class='active'>
+						<a href="{:U('Admin/Index/index')}">素材列表</a>
+					</li>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+</nav>

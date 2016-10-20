@@ -1,0 +1,80 @@
+<include file="Public:header" />
+<body>
+<!--header-->
+<include file="Public:nav" />
+<!--service-banner-->
+<div class="ServiceBanner">
+	<img src="__PUBLIC__/Style/img/pagebg/OurgradesBg.jpg" alt="">
+    <div class="ServiceBannerText">
+    	<div class="ServiceBannerTitle revealOnScroll" data-animation="fadeInLeftPage" data-timeout="200">我们的成绩</div>
+        <div class="ServiceBannerTitleone revealOnScroll" data-animation="fadeInLeftPage" data-timeout="400">OUR GRADES</div>
+        <div class="ServiceBannerTitletwo revealOnScroll" data-animation="fadeInLeftPage" data-timeout="800">品牌营销策划  新媒体营销  电子商务  品牌VI设计及品牌创建推广</div>
+    </div>
+</div>
+<!--container-->
+<div class="container">
+    <div class="container1200">
+    	<div class="TitleImage revealOnScroll" data-animation="fadeIn" data-timeout="600">
+        	<img src="__PUBLIC__/Style/img/title/CaseShow.jpg" alt=""/>
+        </div>
+      <div class="CaseShownav">
+        	<ul>
+            	<li>
+                	<a id="NavPcweb">PC网站</a>|
+                    <!--激活状态span class添加 ActivationUnderline-->
+                    <span class="underline <if condition='$type eq 1 or $type eq 2'>ActivationUnderline</if>"></span>
+                </li>
+                <li>
+                	<a id="NavWx">微信</a>|
+                    <span class="underline <if condition='$type eq 3 or $type eq 4'>ActivationUnderline</if>"></span>
+                </li>
+                <li>
+                	<a href="{:U('Index/Index/achievement', array('type'=>5))}" class="NavApp">APP</a>|
+                    <span class="underline <if condition='$type eq 5'>ActivationUnderline</if>"></span>
+                </li>
+                <li>
+                	<a href="{:U('Index/Index/achievement', array('type'=>6))}" class="NavApp">代运营</a>|
+                    <span class="underline <if condition='$type eq 6'>ActivationUnderline</if>"></span>
+                </li>
+                <li>
+                	<a href="{:U('Index/Index/achievement', array('type'=>7))}" class="NavApp">其他</a>
+                    <span class="underline <if condition='$type eq 7'>ActivationUnderline</if>"></span>
+                </li>
+                <!--激活状态添加 style="display: block;"-->
+              <div class="CaseShownavSecond" <if condition='$type eq 1 or $type eq 2'>style="display: block;"</if>>
+                	<!--激活状态a class添加 ActivationA-->
+            		<a href="{:U('Index/Index/achievement', array('type'=>1))}" class="CaseShownavA <if condition='$type eq 1'>ActivationA</if>">官网</a>|
+                	<a href="{:U('Index/Index/achievement', array('type'=>2))}" class="CaseShownavA <if condition='$type eq 2'>ActivationA</if>">商城</a>
+            	</div>
+              <div class="CaseShownavSecondone" <if condition='$type eq 3 or $type eq 4'>style="display: block;"</if>>
+            		<a href="{:U('Index/Index/achievement', array('type'=>3))}" class="CaseShownavA <if condition='$type eq 3'>ActivationA</if>">平台</a>|
+                	<a href="{:U('Index/Index/achievement', array('type'=>4))}" class="CaseShownavA <if condition='$type eq 4'>ActivationA</if>">活动</a>
+            	</div>
+            </ul>
+        </div>
+        <div class="CaseShowImg">
+            <volist name="result" id="vo">
+            	<!--带二维码去掉的 class里的grow-->
+                <a <if condition = "$type neq 3 and $type neq 4">href="{$vo['url']}"</if>>
+                    <div class="CaseShowImgbox grow">
+                        <div class="CaseShowLogo">
+                            <img src="__PUBLIC__/Uploads/img/{$vo['img']}" alt="{$vo['img']}"/>
+                            <!--下方hover二维码分类显示添加-->
+                            <if condition = "$type eq 3 or $type eq 4">
+                                <div class="CaseShowLogoQr">
+                                    <img src="__PUBLIC__/Uploads/erweima/{$vo['erweima']}" alt="{$vo['img']}"/>
+                                </div>
+                            </if>
+                        </div>
+                        <div class="CaseShowText">{$vo['name']}</div>
+                    </div>
+                </a>
+            </volist>
+        </div>
+    </div>
+    <div class="Page">
+        {$page}
+    </div>
+</div>
+<!--footer-->
+<include file="Public:footer" />
