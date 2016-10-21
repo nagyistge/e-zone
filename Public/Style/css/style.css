@@ -85,8 +85,7 @@ html, body {
 	border-radius: 3px;
 }
 .navfixedone a:hover, .navfixedtwo a:hover {
-	background: #4483d7;
-	color: #fff;
+	color: #4483d7;
 }
 /*首页头部样式end*/
 /*第一部分*/
@@ -1208,10 +1207,7 @@ html, body {
 }
 }
 
-.dselected {
-	background: #4483d7;
-	border-radius: 3px;
-}
+
 .dselected a {
-	color: #fff !important;
+	color: #4483d7 !important;
 }
