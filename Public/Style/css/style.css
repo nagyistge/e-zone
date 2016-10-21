@@ -55,8 +55,7 @@ html, body {
 	display: block;
 }
 .topnav li a:hover {
-	background: #4483d7;
-	color: #fff;
+	color: #4483d7;
 }
 .navfixedone {
 	width: 124px;
