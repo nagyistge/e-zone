@@ -37,11 +37,15 @@ $(function () {
 	$("#NavWx").mouseenter(function() {
 		$(".CaseShownavSecondone").stop().fadeIn();
 		$(".CaseShownavSecond").stop().fadeOut();
-    });	
+    });
 	$(".NavApp").mouseenter(function() {
 		$(".CaseShownavSecondone").stop().fadeOut();
 		$(".CaseShownavSecond").stop().fadeOut();
-    });	
+    });
+		$('#So').mouseenter(
+				function(){
+				 $("#Sa").removeClass('ActivationUnderline')
+				}
+		);
 
 });
-
