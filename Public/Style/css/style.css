@@ -72,7 +72,7 @@ html, body {
 	position: absolute;
 	left: 586px;
 	top: 91px;
-	background: #f0f0f0;
+	background: rgba(240,240,240,0.3);
 	border-radius: 3px;
 	z-index: 99;
 	display: none;
