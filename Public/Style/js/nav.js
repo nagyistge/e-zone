@@ -42,9 +42,9 @@ $(function () {
 		$(".CaseShownavSecondone").stop().fadeOut();
 		$(".CaseShownavSecond").stop().fadeOut();
     });
-		$('#So').mouseenter(
+		$('.CaseShownav li').mouseenter(
 				function(){
-				 $("#Sa").removeClass('ActivationUnderline')
+				 $(".CaseShownav li span").removeClass('ActivationUnderline')
 				}
 		);
 
