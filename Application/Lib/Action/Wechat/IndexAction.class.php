@@ -62,7 +62,7 @@ class IndexAction extends Action {
 		$result = M('material')->where($where)->order('id desc')->select();
 		$callback = [];
 		foreach ($result as $key => $value) {
-			$callback['lists'][$key]['pic'] = $_SERVER['HTTP_HOST']. "/Public/Uploads/img/" .$value['img'];
+			$callback['lists'][$key]['pic'] = "http://".$_SERVER['HTTP_HOST']. "/Public/Uploads/img/" .$value['img'];
 			$callback['lists'][$key]['link'] = $value['url'];
 		}
 		
