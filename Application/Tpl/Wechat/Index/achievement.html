@@ -72,7 +72,7 @@
 
 		<script type="text/javascript">
 			var type = {$type|default = 1};
-			
+
 			//解决移动端点击延时FastClick
 			$(function() {
 				if(type === 3 || type === 4) {
@@ -99,6 +99,7 @@
 					$.ajax({
 						type: 'GET',
 						url: "{:U('Wechat/Index/achievementData')}",
+						data: {type : type},
 						dataType: 'json',
 						success: function(data){
 							var result = '';
