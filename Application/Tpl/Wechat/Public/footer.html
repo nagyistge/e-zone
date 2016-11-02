@@ -16,3 +16,25 @@
 				</p>
 			</div>
 		</div>
+		<!-- 需要在Initialize Swiper前加载 -->
+		<script src="__PUBLIC__/Wechat/js/swiper-3.4.0.jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			//解决移动端点击延时FastClick
+			$(function() {
+				FastClick.attach(document.body);
+			});
+			//Initialize Swiper
+			var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true,
+				autoplay : 3000,
+				speed:300,
+				loop : true,
+				autoplayDisableOnInteraction : false,
+		    });
+		</script>
+		<script src="__PUBLIC__/Wechat/js/nav.js" charset="utf-8"></script>
+		<script src="__PUBLIC__/Wechat/js/modernizr.js" charset="utf-8"></script>
+		<script src="__PUBLIC__/Wechat/js/revealOnScroll.js" charset="utf-8"></script>
+	</body>
+</html>

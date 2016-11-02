@@ -45,8 +45,13 @@ class IndexAction extends Action {
 			$this->display();
 	}
 
+	/**
+	 * 我们的成绩
+	 * @return [type] [description]
+	 */
 	public function achievement() {
 		$this->display();
-	｝
+	}
+	
 }
 ?>
