@@ -71,9 +71,13 @@
 		<script src="__PUBLIC__/Wechat/js/dropload.min.js" charset="utf-8"></script>
 
 		<script type="text/javascript">
+			var type = {$type|default = 1};
+			
 			//解决移动端点击延时FastClick
 			$(function() {
-				test();
+				if(type === 3 || type === 4) {
+					test();
+				}
 				FastClick.attach(document.body);
 			});
 			//弹窗
@@ -120,7 +124,9 @@
 								$('.lists').append(result);
 								// 每次数据加载完，必须重置
 								me.resetload();
-								test();
+								if(type === 3 || type === 4) {
+									test();
+								}
 							},1000);
 						},
 						error: function(xhr, type){

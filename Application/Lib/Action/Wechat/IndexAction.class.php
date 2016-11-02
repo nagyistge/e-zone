@@ -63,11 +63,10 @@ class IndexAction extends Action {
 		$callback = [];
 		foreach ($result as $key => $value) {
 			$callback['lists'][$key]['pic'] = "http://".$_SERVER['HTTP_HOST']. "/Public/Uploads/img/" .$value['img'];
-			// $callback['lists'][$key]['link'] = $value['url'];
-			// if($value['type'] == 3 || $value['type'] == 4) {
-				
-			// }
-			$callback['lists'][$key]['link'] = "http://".$_SERVER['HTTP_HOST']. "/Public/Uploads/erweima/" .$value['erweima'];
+			$callback['lists'][$key]['link'] = $value['url'];
+			if($value['type'] == 3 || $value['type'] == 4) {
+				$callback['lists'][$key]['link'] = "http://".$_SERVER['HTTP_HOST']. "/Public/Uploads/erweima/" .$value['erweima'];
+			}
 		}
 		echo json_encode($callback);
 	}
