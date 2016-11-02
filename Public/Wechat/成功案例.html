@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css">
+		<script src="js/flexible_css.debug.js" charset="utf-8"></script>
+		<script src="js/flexible.debug.js" charset="utf-8"></script>
+		<script src="js/jquery-2.0.3.min.js" charset="utf-8"></script>
+		<script src="js/fastclick.js" charset="utf-8"></script>
+		<script src="js/nav.js" charset="utf-8"></script>
+		<title>首页</title>
+	</head>
+	<body>
+		<div class="preloader">
+			<img src="img/loader.gif" alt=""/>
+		</div>
+		<div class="HeadBox">
+			<div class="HeadLogo">
+				<img src="img/@x1/logo.png" srcset="img/@x2/logo.png 2x,img/@x3/logo.png 3x" alt="logo" />
+			</div>
+			<div class="circle"></div>
+			<div class="menu">
+				<ul>
+					<li class="NavTitle"><a href="http://www.baidu.com/">菜单</a></li>
+					<li class="NavText"><a href="http://www.baidu.com/">首页</a></li>
+					<li class="NavText"><a href="http://www.baidu.com/">我们的服务</a></li>
+					<li class="NavText"><a href="http://www.baidu.com/">我们的成绩</a></li>
+                    <li class="NavText"><a href="http://www.baidu.com/">关于亿众</a></li>
+                    <li class="NavText"><a href="http://www.baidu.com/">职业发展</a></li>
+					<li class="NavText"><a href="http://www.baidu.com/">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="HeadNavIco">
+				<div class="x"></div>
+				<div class="y"></div>
+				<div class="z"></div>
+			</div>
+		</div>
+
+		<div class="MainBox">
+			<div class="YzService">
+				<div class="YzServiceTitle">
+					<img src="img/@x1/casetetle.png" srcset="img/@x2/casetetle.png 2x,img/@x3/casetetle.png 3x" alt="title" />
+				</div>
+				<div class="CaseNavOne">
+					<!-- CaseNavColorActivation激活样式 -->
+					<a class="CaseNavColorActivation NavText" href="http://www.baidu.com/">PC网站</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">微信</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">APP</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">代运营</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">其他</a>
+				</div>
+				<div class="CaseNavTwo">
+					<!-- 激活官网 -->
+					<!-- <a class="CaseBorderWhite" href="#">官网</a>
+					<a class="CaseBorderLeft" href="#">商城</a> -->
+					<!-- 激活商城 -->
+					<a class="CaseBorderRight" href="#">官网</a>
+					<a class="CaseBorderWhite">商城</a>
+					<!-- 激活平台 -->
+					<!-- <a class="CaseBorderWhite" href="#">平台</a>
+					<a class="CaseBorderLeft" href="#">活动</a> -->
+					<!-- 激活活动 -->
+					<!-- <a class="CaseBorderRight" href="#">平台</a>
+					<a class="CaseBorderWhite" href="#">活动</a> -->
+				</div>
+				<div class="content">
+					<div class="lists">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="Footer">
+			<div class="FooterLogo">
+				<img src="img/@x1/logo.png" srcset="img/@x2/logo.png 2x,img/@x3/logo.png 3x" alt="footerlogo" />
+			</div>
+			<div class="FooterText">
+				<p>
+					服务热线：010-84533466-831
+				</p>
+				<p>
+					客服邮箱：customer@easy-all.net
+				</p>
+			</div>
+			<div class="Copyright">
+				<p class="CopyrightText">
+					Copyright © 2016 北京亿众互动科技有限公司版权所有
+				</p>
+			</div>
+		</div>
+		<script src="js/dropload.min.js" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			//解决移动端点击延时FastClick
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<script>
+			$(function(){
+				var counter = 0;
+				// 每页展示8个
+				var num = 8;
+				var pageStart = 0,pageEnd = 0;
+
+				// dropload
+				$('.content').dropload({
+				scrollArea : window,
+				loadDownFn : function(me){
+					$.ajax({
+						type: 'GET',
+						url: './more.json',
+						dataType: 'json',
+						success: function(data){
+							var result = '';
+							counter++;
+							pageEnd = num * counter;
+							pageStart = pageEnd - num;
+
+							for(var i = pageStart; i < pageEnd; i++){
+								result +=   '<a href="'+data.lists[i].link+'">'
+												+'<img src="'+data.lists[i].pic+'" alt="">'
+											+'</a>';
+								if((i + 1) >= data.lists.length){
+									// 锁定
+									me.lock();
+									// 无数据
+									me.noData();
+									break;
+								}
+						 	}
+							// 为了测试，延迟1秒加载
+							setTimeout(function(){
+								$('.lists').append(result);
+								// 每次数据加载完，必须重置
+								me.resetload();
+							},1000);
+						},
+						error: function(xhr, type){
+							alert('Ajax error!');
+							// 即使加载出错，也得重置
+							me.resetload();
+						}
+					});
+				}
+				});
+			});
+	    </script>
+		<script src="js/nav.js" charset="utf-8"></script>
+		<script src="js/modernizr.js" charset="utf-8"></script>
+		<script src="js/revealOnScroll.js" charset="utf-8"></script>
+	</body>
+</html>
