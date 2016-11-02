@@ -94,7 +94,7 @@
 				loadDownFn : function(me){
 					$.ajax({
 						type: 'GET',
-						url: 'http://e-zone.easy-all.cn/Public/Wechat/more.json',
+						url: "{:U('Wechat/Index/achievementData')}",
 						dataType: 'json',
 						success: function(data){
 							var result = '';
