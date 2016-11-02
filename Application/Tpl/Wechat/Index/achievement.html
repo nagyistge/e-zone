@@ -1,0 +1,93 @@
+<include file="Public:header" />
+<div class="MainBox">
+			<div class="YzService">
+				<div class="YzServiceTitle">
+					<img src="__PUBLIC__/Wechat/img/@x1/casetetle.png" srcset="__PUBLIC__/Wechat/img/@x2/casetetle.png 2x,img/@x3/casetetle.png 3x" alt="title" />
+				</div>
+				<div class="CaseNavOne">
+					<!-- CaseNavColorActivation激活样式 -->
+					<a class="CaseNavColorActivation NavText" href="http://www.baidu.com/">PC网站</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">微信</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">APP</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">代运营</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">其他</a>
+				</div>
+				<div class="CaseNavTwo">
+					<!-- 激活官网 -->
+					<!-- <a class="CaseBorderWhite" href="#">官网</a>
+					<a class="CaseBorderLeft" href="#">商城</a> -->
+					<!-- 激活商城 -->
+					<a class="CaseBorderRight" href="#">官网</a>
+					<a class="CaseBorderWhite">商城</a>
+					<!-- 激活平台 -->
+					<!-- <a class="CaseBorderWhite" href="#">平台</a>
+					<a class="CaseBorderLeft" href="#">活动</a> -->
+					<!-- 激活活动 -->
+					<!-- <a class="CaseBorderRight" href="#">平台</a>
+					<a class="CaseBorderWhite" href="#">活动</a> -->
+				</div>
+				<div class="content">
+					<div class="lists">
+
+					</div>
+				</div>
+			</div>
+			<script src="__PUBLIC__/Wechat/js/dropload.min.js" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			//解决移动端点击延时FastClick
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<script>
+			$(function(){
+				var counter = 0;
+				// 每页展示8个
+				var num = 8;
+				var pageStart = 0,pageEnd = 0;
+
+				// dropload
+				$('.content').dropload({
+				scrollArea : window,
+				loadDownFn : function(me){
+					$.ajax({
+						type: 'GET',
+						url: './more.json',
+						dataType: 'json',
+						success: function(data){
+							var result = '';
+							counter++;
+							pageEnd = num * counter;
+							pageStart = pageEnd - num;
+
+							for(var i = pageStart; i < pageEnd; i++){
+								result +=   '<a href="'+data.lists[i].link+'">'
+												+'<img src="'+data.lists[i].pic+'" alt="">'
+											+'</a>';
+								if((i + 1) >= data.lists.length){
+									// 锁定
+									me.lock();
+									// 无数据
+									me.noData();
+									break;
+								}
+						 	}
+							// 为了测试，延迟1秒加载
+							setTimeout(function(){
+								$('.lists').append(result);
+								// 每次数据加载完，必须重置
+								me.resetload();
+							},1000);
+						},
+						error: function(xhr, type){
+							alert('Ajax error!');
+							// 即使加载出错，也得重置
+							me.resetload();
+						}
+					});
+				}
+				});
+			});
+	    </script>
+<include file="Public:footer" />
