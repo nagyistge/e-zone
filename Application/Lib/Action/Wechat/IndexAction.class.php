@@ -26,8 +26,7 @@ class IndexAction extends Action {
 	  *
 	  * 关于亿众
 	  */
-	 public function aboutUs() {
-	
+	 public function aboutUs() {	
 		$this->display();
 	}
 
@@ -35,16 +34,14 @@ class IndexAction extends Action {
 	 * 联系我们
 	 * @return [type] [description]
 	 */
-	public function contact() {
-	
+	public function contact() {	
 			$this->display();
 	}
 	/**
 	 * 职业发展
 	 * @return [type] [description]
 	 */
-	public function  team() {
-		
+	public function  team() {		
 			$this->display();
 	}
 
