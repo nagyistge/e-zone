@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta content="yes" name="apple-mobile-web-app-capable">
-		<meta content="yes" name="apple-touch-fullscreen">
-		<meta content="telephone=no,email=no" name="format-detection">
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Wechat/css/style.css">
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Wechat/css/animate.css">
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Wechat/css/swiper-3.4.0.min.css">
-		<script src="__PUBLIC__/Wechat/js/flexible_css.debug.js" charset="utf-8"></script>
-		<script src="__PUBLIC__/Wechat/js/flexible.debug.js" charset="utf-8"></script>
-		<script src="__PUBLIC__/Wechat/js/jquery-2.0.3.min.js" charset="utf-8"></script>
-		<script src="__PUBLIC__/Wechat/js/fastclick.js" charset="utf-8"></script>
-		<script src="__PUBLIC__/Wechat/js/nav.js" charset="utf-8"></script>
-		<title>首页</title>
-	</head>
-	<body>
-		<div class="preloader">
-			<img src="__PUBLIC__/Wechat/img/loader.gif" alt=""/>
-		</div>
-		<div class="HeadBox">
-			<div class="HeadLogo">
-				<img src="__PUBLIC__/Wechat/img/@x1/logo.png" srcset="__PUBLIC__/Wechat/img/@x2/logo.png 2x,img/@x3/logo.png 3x" alt="logo" />
-			</div>
-			<div class="circle"></div>
-			<div class="menu">
-				<ul>
-					<li class="NavTitle"><a href="http://www.baidu.com/">菜单</a></li>
-					<li class="NavText"><a href="http://www.baidu.com/">首页</a></li>
-					<li class="NavText"><a href="http://www.baidu.com/">我们的服务</a></li>
-					<li class="NavText"><a href="http://www.baidu.com/">我们的成绩</a></li>
-                    <li class="NavText"><a href="http://www.baidu.com/">关于亿众</a></li>
-                    <li class="NavText"><a href="http://www.baidu.com/">职业发展</a></li>
-					<li class="NavText"><a href="http://www.baidu.com/">联系我们</a></li>
-				</ul>
-			</div>
-			<div class="HeadNavIco">
-				<div class="x"></div>
-				<div class="y"></div>
-				<div class="z"></div>
-			</div>
-		</div>
+<include file="Public:header" />
 		<div class="Banner">
 			<!-- Swiper -->
 			<div class="swiper-container">
@@ -123,28 +81,11 @@
 					<img src="__PUBLIC__/Wechat/img/@x1/partnerstitle.png" srcset="__PUBLIC__/Wechat/img/@x2/partnerstitle.png 2x,img/@x3/partnerstitle.png 3x" alt="title" />
 				</div>
 				<div class="YzPartnersBox">
-					<img src="img/@x1/partnersico.png" srcset="img/@x2/partnersico.png 2x,img/@x3/partnersico.png 3x" alt="partnersico" />
+					<img src="__PUBLIC__/Wechat/img/@x1/partnersico.png" srcset="__PUBLIC__/Wechat/img/@x2/partnersico.png 2x,img/@x3/partnersico.png 3x" alt="partnersico" />
 				</div>
 			</div>
 		</div>
-		<div class="Footer">
-			<div class="FooterLogo">
-				<img src="__PUBLIC__/Wechat/img/@x1/logo.png" srcset="__PUBLIC__/Wechat/img/@x2/logo.png 2x,img/@x3/logo.png 3x" alt="footerlogo" />
-			</div>
-			<div class="FooterText">
-				<p>
-					服务热线：010-84533466-831
-				</p>
-				<p>
-					客服邮箱：customer@easy-all.net
-				</p>
-			</div>
-			<div class="Copyright">
-				<p class="CopyrightText">
-					Copyright © 2016 北京亿众互动科技有限公司版权所有
-				</p>
-			</div>
-		</div>
+		<include file="Public:footer" />
 		<!-- 需要在Initialize Swiper前加载 -->
 		<script src="__PUBLIC__/Wechat/js/swiper-3.4.0.jquery.min.js" charset="utf-8"></script>
 		<script type="text/javascript">
