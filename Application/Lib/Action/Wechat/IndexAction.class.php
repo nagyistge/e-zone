@@ -51,10 +51,11 @@ class IndexAction extends Action {
 	 */
 	public function achievement() {
 		$type = isset($_GET['type']) ? intval($_GET['type']) : 1;
-		/*$where = array();
+		$where = array();
 		$where['classification'] = $type
 		$result = M('material')->where($where)->order('id desc')->select();
-		$this->assign('result', $result);*/
+		dump($result);
+		$this->assign('result', $result);
 		$this->assign('type', $type);
 		$this->display();
 	}
