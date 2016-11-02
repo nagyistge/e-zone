@@ -523,20 +523,21 @@
 	overflow: hidden;
 }
 .lists a {
-	width: 4.2rem;
-	height: 4.2rem;
-	margin: 0.133333rem 0.133333rem;
+	width: 4.226667rem;
+	height: 2.546667rem;
+	margin: 0.133333rem 0.066667rem;
 	display: block;
 	border-radius: 0.133333rem;
 	background: #ffffe5;
 	float: left;
+	border: 1px #ccc solid;
 }
 .lists {
 	overflow: hidden;
 }
 .lists a img {
 	width: 4.2rem; /*315px*/
-	height: 4.2rem;
+	height: 2.52rem; /*189px*/
 	border-radius: 0.133333rem;
 }
 .dropload-down {
