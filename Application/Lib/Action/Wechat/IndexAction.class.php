@@ -14,6 +14,12 @@ class IndexAction extends Action {
 		$this->display();
 	}
     
-	
+    /**
+     *
+     * 服务
+     */
+	public function service() {
+		$this->display();
+	}
 }
 ?>

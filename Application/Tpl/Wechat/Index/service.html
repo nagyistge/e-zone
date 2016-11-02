@@ -1,0 +1,114 @@
+<include file="Public:header" />
+		<div class="Banner">
+			<!-- Swiper -->
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+						<img src="__PUBLIC__/Wechat/img/@x1/banner-2.png" srcset="__PUBLIC__/Wechat/img/@x2/banner-2.png 2x,img/@x3/banner-2.png 3x" alt="Banner" />
+					</div>
+		            <div class="swiper-slide">
+						<img src="__PUBLIC__/Wechat/img/@x1/banner-2.png" srcset="__PUBLIC__/Wechat/img/@x2/banner-2.png 2x,img/@x3/banner-2.png 3x" alt="Banner" />
+					</div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		    </div>
+		</div>
+		<div class="MainBox">
+			<div class="YzService">
+				<div class="YzServiceTitle">
+					<img src="__PUBLIC__/Wechat/img/@x1/servicetitle.png" srcset="__PUBLIC__/Wechat/img/@x2/servicetitle.png 2x,img/@x3/servicetitle.png 3x" alt="title" />
+				</div>
+				<div class="YzServiceContent revealOnScroll" data-animation="fadeInLeft" data-timeout="200">
+					<div class="YzServiceIcoBox">
+						<div class="YzServiceIco">
+							<img src="__PUBLIC__/Wechat/img/@x1/serviceico1.png" srcset="__PUBLIC__/Wechat/img/@x2/serviceico1.png 2x,img/@x3/serviceico1.png 3x" alt="YzServiceIco" />
+						</div>
+						<div class="YzServiceContainer">
+							<h1 class="NavText">品牌推广</h1>
+							<p>
+								提供更有效的客户资源管理模式，能够更有效地管理客户、挖掘客户需求、推广产品
+							</p>
+						</div>
+					</div>
+					<div class="YzServiceIcoBox">
+						<div class="YzServiceIco">
+							<img src="__PUBLIC__/Wechat/img/@x1/serviceico2.png" srcset="__PUBLIC__/Wechat/img/@x2/serviceico2.png 2x,img/@x3/serviceico2.png 3x" alt="YzServiceIco" />
+						</div>
+						<div class="YzServiceContainer">
+							<h1 class="NavText">电子商务</h1>
+							<p>
+								无需当面进行，均通过计算机互联网络完成整个交易完全虚拟化
+							</p>
+						</div>
+					</div>
+					<div class="YzServiceIcoBox">
+						<div class="YzServiceIco">
+							<img src="__PUBLIC__/Wechat/img/@x1/serviceico.png" srcset="__PUBLIC__/Wechat/img/@x2/serviceico.png 2x,img/@x3/serviceico.png 3x" alt="YzServiceIco" />
+						</div>
+						<div class="YzServiceContainer">
+							<h1 class="NavText">活动策划</h1>
+							<p>
+								把企业要传达的目标信息传播得更准确、详尽
+							</p>
+						</div>
+					</div>
+					<div class="YzServiceIcoBox">
+						<div class="YzServiceIco">
+							<img src="__PUBLIC__/Wechat/img/@x1/serviceico3.png" srcset="__PUBLIC__/Wechat/img/@x2/serviceico3.png 2x,img/@x3/serviceico3.png 3x" alt="YzServiceIco" />
+						</div>
+						<div class="YzServiceContainer">
+							<h1 class="NavText">新媒体营销</h1>
+							<p>
+								有效降低营销成本、提升广告创意空间、让消费者选择并互动、让用户帮你创造产品
+							</p>
+						</div>
+					</div>
+					<div class="YzServiceIcoBox">
+						<div class="YzServiceIco">
+							<img src="__PUBLIC__/Wechat/img/@x1/serviceico4.png" srcset="__PUBLIC__/Wechat/img/@x2/serviceico4.png 2x,img/@x3/serviceico4.png 3x" alt="YzServiceIco" />
+						</div>
+						<div class="YzServiceContainer">
+							<h1 class="NavText">数据分析</h1>
+							<p>
+								对收集来的大量第一手资料和第二手资料进行分析，以求最大化地开发数据资料的功能
+							</p>
+						</div>
+					</div>
+					<div class="YzServiceIcoBox">
+						<div class="YzServiceIco">
+							<img src="__PUBLIC__/Wechat/img/@x1/serviceico5.png" srcset="__PUBLIC__/Wechat/img/@x2/serviceico5.png 2x,img/@x3/serviceico5.png 3x" alt="YzServiceIco" />
+						</div>
+						<div class="YzServiceContainer Noborder">
+							<h1 class="NavText">创意创新</h1>
+							<p>
+								主张打开大门，张开思维之网，冲破一切禁锢，尽力接受更多的信息
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include file="Public:footer" />
+		<!-- 需要在Initialize Swiper前加载 -->
+		<script src="__PUBLIC__/Wechat/js/swiper-3.4.0.jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			//解决移动端点击延时FastClick
+			$(function() {
+				FastClick.attach(document.body);
+			});
+			//Initialize Swiper
+			var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true,
+				autoplay : 3000,
+				speed:300,
+				loop : true,
+				autoplayDisableOnInteraction : false,
+		    });
+		</script>
+		<script src="__PUBLIC__/Wechat/js/nav.js" charset="utf-8"></script>
+		<script src="__PUBLIC__/Wechat/js/modernizr.js" charset="utf-8"></script>
+		<script src="__PUBLIC__/Wechat/js/revealOnScroll.js" charset="utf-8"></script>
+	</body>
+</html>
