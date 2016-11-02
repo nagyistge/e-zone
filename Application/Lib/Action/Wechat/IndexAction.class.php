@@ -68,7 +68,7 @@ class IndexAction extends Action {
 				$callback['lists'][$key]['link'] = "http://".$_SERVER['HTTP_HOST']. "/Public/Uploads/erweima/" .$value['erweima'];
 			}
 		}
-		echo json_encode($callback);
+		echo !empty($callback) ? json_encode($callback) : '[]';
 	}
 	
 }
