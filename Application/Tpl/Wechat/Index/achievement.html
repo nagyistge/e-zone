@@ -2,7 +2,7 @@
 <div class="MainBox">
 			<div class="YzService">
 				<div class="YzServiceTitle">
-					<img src="__PUBLIC__/Wechat/img/@x1/casetetle.png" srcset="__PUBLIC__/Wechat/img/@x2/casetetle.png 2x,img/@x3/casetetle.png 3x" alt="title" />
+					<img src="img/@x1/casetetle.png" srcset="img/@x2/casetetle.png 2x,img/@x3/casetetle.png 3x" alt="title" />
 				</div>
 				<div class="CaseNavOne">
 					<!-- CaseNavColorActivation激活样式 -->
@@ -27,20 +27,26 @@
 					<a class="CaseBorderWhite" href="#">活动</a> -->
 				</div>
 				<div class="content">
-					<div class="lists">
+					<div class="lists" id="gallery">
 
 					</div>
 				</div>
 			</div>
-			<script src="__PUBLIC__/Wechat/js/dropload.min.js" charset="utf-8"></script>
+		</div>
+		<script src="__PUBLIC__/Wechat/js/dropload.min.js" charset="utf-8"></script>
 
 		<script type="text/javascript">
 			//解决移动端点击延时FastClick
 			$(function() {
+				//test();
 				FastClick.attach(document.body);
 			});
-		</script>
-		<script>
+			//弹窗
+			function test() {
+				$('#gallery').poptrox({
+					usePopupCaption: true
+				});
+			}
 			$(function(){
 				var counter = 0;
 				// 每页展示8个
@@ -53,7 +59,7 @@
 				loadDownFn : function(me){
 					$.ajax({
 						type: 'GET',
-						url: './more.json',
+						url: 'more.json',
 						dataType: 'json',
 						success: function(data){
 							var result = '';
@@ -62,8 +68,9 @@
 							pageStart = pageEnd - num;
 
 							for(var i = pageStart; i < pageEnd; i++){
-								result +=   '<a href="'+data.lists[i].link+'">'
-												+'<img src="'+data.lists[i].pic+'" alt="">'
+								result +=   /*'<a href="'+data.lists[i].link+'">'*/
+											'<a href="'+data.lists[i].link+'">'
+												+'<img src="'+data.lists[i].pic+'" alt="" title="长按保存识别二维码">'
 											+'</a>';
 								if((i + 1) >= data.lists.length){
 									// 锁定
@@ -78,6 +85,7 @@
 								$('.lists').append(result);
 								// 每次数据加载完，必须重置
 								me.resetload();
+								//test();
 							},1000);
 						},
 						error: function(xhr, type){
