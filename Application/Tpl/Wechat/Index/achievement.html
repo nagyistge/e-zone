@@ -6,19 +6,59 @@
 				</div>
 				<div class="CaseNavOne">
 					<!-- CaseNavColorActivation激活样式 -->
-					<a class="CaseNavColorActivation NavText" href="http://www.baidu.com/">PC网站</a>
-					<a class="CaseNavColor NavText" href="http://www.baidu.com/">微信</a>
+					<a 
+						<if condition="($type eq 1) OR ($type eq 2)"> class="CaseNavColorActivation NavText" 
+						<else /> class="CaseNavColor NavText"
+						</if> href="{:U('Wechat/Index/achievement',array('type' =>1))}}">PC网站
+					</a>
+					<a 
+						<if condition="($type eq 3) OR ($type eq 4)"> class="CaseNavColorActivation NavText" 
+						<else /> class="CaseNavColor NavText"
+						</if> href="{:U('Wechat/Index/achievement',array('type' =>3))}}">微信
+					</a>
+					<a 
+						<if condition="$type eq 5"> class="CaseNavColorActivation NavText" 
+						<else /> class="CaseNavColor NavText"
+						</if> href="{:U('Wechat/Index/achievement',array('type' =>5))}}">APP
+					</a>
+					<a 
+						<if condition="$type eq 6"> class="CaseNavColorActivation NavText" 
+						<else /> class="CaseNavColor NavText"
+						</if> href="{:U('Wechat/Index/achievement',array('type' =>6))}}">代运营
+					</a>
+					<a 
+						<if condition="$type eq 7"> class="CaseNavColorActivation NavText" 
+						<else /> class="CaseNavColor NavText"
+						</if> href="{:U('Wechat/Index/achievement',array('type' =>7))}}">其他
+					</a>
+					<!-- <a class="CaseNavColor NavText" href="http://www.baidu.com/">微信</a>
 					<a class="CaseNavColor NavText" href="http://www.baidu.com/">APP</a>
 					<a class="CaseNavColor NavText" href="http://www.baidu.com/">代运营</a>
-					<a class="CaseNavColor NavText" href="http://www.baidu.com/">其他</a>
+					<a class="CaseNavColor NavText" href="http://www.baidu.com/">其他</a> -->
 				</div>
 				<div class="CaseNavTwo">
 					<!-- 激活官网 -->
 					<!-- <a class="CaseBorderWhite" href="#">官网</a>
 					<a class="CaseBorderLeft" href="#">商城</a> -->
 					<!-- 激活商城 -->
-					<a class="CaseBorderRight" href="#">官网</a>
-					<a class="CaseBorderWhite">商城</a>
+					<eq name="type" value="1">
+						<a class="CaseBorderWhite" href="{:U('Wechat/Index/achievement',array('type' =>1))}}">官网</a>
+						<a class="CaseBorderRight" href="{:U('Wechat/Index/achievement',array('type' =>2))}}">商城</a>
+					</eq>
+					<eq name="type" value="2">
+						<a class="CaseBorderRight" href="{:U('Wechat/Index/achievement',array('type' =>1))}}">官网</a>
+						<a class="CaseBorderWhite" href="{:U('Wechat/Index/achievement',array('type' =>2))}}">商城</a>
+					</eq>
+					
+					<eq name="type" value="3">
+						<a class="CaseBorderWhite" href="{:U('Wechat/Index/achievement',array('type' =>3))}}">平台</a>
+						<a class="CaseBorderRight" href="{:U('Wechat/Index/achievement',array('type' =>4))}}">活动</a>
+					</eq>
+
+					<eq name="type" value="5">
+						<a class="CaseBorderRight" href="{:U('Wechat/Index/achievement',array('type' =>3))}}">平台</a>
+						<a class="CaseBorderWhite" href="{:U('Wechat/Index/achievement',array('type' =>4))}}">活动</a>
+					</eq>
 					<!-- 激活平台 -->
 					<!-- <a class="CaseBorderWhite" href="#">平台</a>
 					<a class="CaseBorderLeft" href="#">活动</a> -->
@@ -38,7 +78,7 @@
 		<script type="text/javascript">
 			//解决移动端点击延时FastClick
 			$(function() {
-				//test();
+				test();
 				FastClick.attach(document.body);
 			});
 			//弹窗
@@ -85,7 +125,7 @@
 								$('.lists').append(result);
 								// 每次数据加载完，必须重置
 								me.resetload();
-								//test();
+								test();
 							},1000);
 						},
 						error: function(xhr, type){
