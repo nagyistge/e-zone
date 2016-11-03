@@ -51,12 +51,24 @@ class IndexAction extends Action {
 	 */
 	public function achievement() {
 		$type = isset($_GET['type']) ? intval($_GET['type']) : 1;
-		/*$where = array();
-		$where['classification'] = $type
-		$result = M('material')->where($where)->order('id desc')->select();
-		$this->assign('result', $result);*/
 		$this->assign('type', $type);
 		$this->display();
+	}
+
+	public function achievementData() {
+		$type = isset($_GET['type']) ? intval($_GET['type']) : 1;
+		$where = array();
+		$where['classification'] = $type;
+		$result = M('material')->where($where)->order('id desc')->select();
+		$callback = [];
+		foreach ($result as $key => $value) {
+			$callback['lists'][$key]['pic'] = "http://".$_SERVER['HTTP_HOST']. "/Public/Uploads/img/" .$value['img'];
+			$callback['lists'][$key]['link'] = $value['url'];
+			if($type == 3 || $type == 4) {
+				$callback['lists'][$key]['link'] = "http://".$_SERVER['HTTP_HOST']. "/Public/Uploads/erweima/" .$value['erweima'];
+			}
+		}
+		echo !empty($callback) ? json_encode($callback) : '[]';
 	}
 	
 }
