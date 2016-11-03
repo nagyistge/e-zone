@@ -70,7 +70,7 @@ jQuery.easing.def = "easeInOutBack";
 					"mouseleave",
 						function(event){
 							$span.stop();
-						var x = -100;
+						var x = -130;
 						if($hovered_pos) {
 							x = $hovered_pos;
 							var index = 0;
