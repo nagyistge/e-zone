@@ -16,7 +16,7 @@ if ('ontouchstart' in window) {
 			closeMenu();
 		}
 	});
-	$('div.menu ul li a').on(click, function (e) {
+	$('div.menu ul li').on(click, function (e) {
 		e.preventDefault();
 		closeMenu();
 	});
