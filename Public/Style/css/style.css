@@ -104,7 +104,7 @@ html, body {
 	z-index: 99;
 	display: none;
 }
-.navfixedone a.navfixedtwo a {
+.navfixedone a,.navfixedtwo a {
 	font-size: 18px;
 	padding: 6px 26px 6px 26px;
 	display: block;
