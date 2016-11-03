@@ -1178,3 +1178,31 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+@keyframes navbgcolor {
+from {
+    background: rgba(255,255,255,1)
+  }
+
+  to {
+    background: rgba(255,255,255,0)
+  }
+}
+@keyframes navbgcolorone {
+from {
+    background: rgba(255,255,255,0)
+  }
+
+  to {
+    background: rgba(255,255,255,1)
+  }
+}
+#menu .index-header-one {
+	-webkit-animation: navbgcoloroneone 1.5s ease both;
+	-moz-animation: navbgcolorone 1.5s ease both;
+	animation: navbgcolorone 1.5s ease both;
+}
+#menu .active .index-header-one {
+	-webkit-animation: navbgcolor 1.5s ease both;
+	-moz-animation: navbgcolor 1.5s ease both;
+	animation: navbgcolor 1.5s ease both;
+}
