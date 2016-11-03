@@ -187,6 +187,7 @@
 		text-transform:uppercase;
 		text-decoration:none;
 		letter-spacing:0.04rem;
+		padding: 0.133333rem 0.133333rem 0.133333rem 0.133333rem;
 	}
 
 .menu li.animate{
