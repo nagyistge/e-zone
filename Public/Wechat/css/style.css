@@ -58,8 +58,8 @@
 	cursor: pointer;
 }
 .x,.y,.z {
-	position: absolute; 
-	margin: auto;	
+	position: absolute;
+	margin: auto;
 	background: #fff;
 	border-radius:2px;
 	-webkit-transition: all 200ms ease-out;
@@ -93,9 +93,9 @@
 	transition: all 70ms ease-out;
 }
 .rotate30 {
-	-ms-transform: rotate(30deg); 
-	-webkit-transform: rotate(30deg); 
-	transform: rotate(30deg);	
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
 	-webkit-transition: all 50ms ease-out;
 	-moz-transition: all 50ms ease-out;
 	-ms-transition: all 50ms ease-out;
@@ -103,9 +103,9 @@
 	transition: all 50ms ease-out;
 }
 .rotate150 {
-	-ms-transform: rotate(150deg); 
-	-webkit-transform: rotate(150deg); 
-	transform: rotate(150deg);	
+	-ms-transform: rotate(150deg);
+	-webkit-transform: rotate(150deg);
+	transform: rotate(150deg);
 	-webkit-transition: all 50ms ease-out;
 	-moz-transition: all 50ms ease-out;
 	-ms-transition: all 50ms ease-out;
@@ -114,9 +114,9 @@
 }
 
 .rotate45 {
-	-ms-transform: rotate(45deg); 
-	-webkit-transform: rotate(45deg); 
-	transform: rotate(45deg);	
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
 	-webkit-transition: all 100ms ease-out;
 	-moz-transition: all 100ms ease-out;
 	-ms-transition: all 100ms ease-out;
@@ -124,9 +124,9 @@
 	transition: all 100ms ease-out;
 }
 .rotate135 {
-	-ms-transform: rotate(135deg); 
-	-webkit-transform: rotate(135deg); 
-	transform: rotate(135deg);	
+	-ms-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
 	-webkit-transition: all 100ms ease-out;
 	-moz-transition: all 100ms ease-out;
 	-ms-transition: all 100ms ease-out;
@@ -162,7 +162,7 @@
 		width: 4.626667rem;
 		height: 8.32rem;
 		position: absolute;
-		top: 0px; 
+		top: 0px;
 		right: 0px;
 		display: none;
 }
@@ -177,14 +177,16 @@
 		text-align:left;
 		font-size:0px;
 		z-index: 12;
-		
-		
+
+
 	}
 .menu ul li a {
+		width: 100%;
+		display: block;
 		color:#fff;
 		text-transform:uppercase;
-		text-decoration:none;	
-		letter-spacing:0.04rem;			
+		text-decoration:none;
+		letter-spacing:0.04rem;
 	}
 
 .menu li.animate{
@@ -199,11 +201,11 @@
 .menu li.animate:nth-of-type(1){
 		/*width: 299px;	*/
 		width: 3.986667rem;
-		top:0.466667rem;  
+		top:0.466667rem;
 		margin-left: 0.32rem;
 		margin-right: 0.32rem;
 		padding-bottom:0.2rem;
-		transition-delay: 0.0s;	
+		transition-delay: 0.0s;
 		border-bottom: solid 1px #fff;
 		background:#2d2d2d;
 	}
@@ -211,8 +213,8 @@
 		width: 4.08rem;
 		top:1.733333rem; /*130px*/
 		margin-left: 0.546667rem;
-		transition-delay: 0.03s;	
-				
+		transition-delay: 0.03s;
+
 	}
 .menu li.animate:nth-of-type(3){
 		top:2.8rem; /*210px*/
@@ -224,27 +226,27 @@
 		top:3.866667rem; /*290px*/
 		transition-delay: 0.09s;
 		width: 4.08rem;
-		margin-left: 0.546667rem;	
+		margin-left: 0.546667rem;
 	}
 .menu li.animate:nth-of-type(5){
 		top:4.933333rem; /*370px*/
 		transition-delay: 0.12s;
 		width: 4.08rem;
-		margin-left: 0.546667rem;		
+		margin-left: 0.546667rem;
 	}
 .menu li.animate:nth-of-type(6){
 		top:6.0rem; /*450px*/
 		transition-delay: 0.15s;
 		width: 4.08rem;
 		margin-left: 0.546667rem;
-				
+
 	}
 .menu li.animate:nth-of-type(7){
 		top:7.066667rem; /*530px*/
 		transition-delay: 0.17s;
 		width: 4.08rem;
 		margin-left: 0.546667rem;
-				
+
 	}
 .Banner {
 	width: 10.0rem;
@@ -369,7 +371,7 @@
 	padding: 0.4rem 0 0 0.533333rem;
 }
 .FooterText {
-	padding: 0.533333rem 0.533333rem 0 0; 
+	padding: 0.533333rem 0.533333rem 0 0;
 	text-align: right;
 }
 .FooterText p {
