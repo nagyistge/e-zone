@@ -4,9 +4,7 @@ $(window).on('load', function() {
 	$('.preloader').delay(320).fadeOut('slow', function() {
 	});
 });
-$(".menu").find('li').eq(1).click(function(event) {
-	window.location.href = "{:U('Wechat/Index/index')}";
-});
+
 if ('ontouchstart' in window) {
 		var click = 'touchstart';
 	} else {
@@ -19,7 +17,7 @@ if ('ontouchstart' in window) {
 			closeMenu();
 		}
 	});
-	$('div.menu ul li').on(click, function (e) {
+	$('div.menu ul li a').on(click, function (e) {
 		e.preventDefault();
 		closeMenu();
 	});
