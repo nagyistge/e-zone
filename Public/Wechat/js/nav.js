@@ -4,7 +4,6 @@ $(window).on('load', function() {
 	$('.preloader').delay(320).fadeOut('slow', function() {
 	});
 });
-
 if ('ontouchstart' in window) {
 		var click = 'touchstart';
 	} else {
