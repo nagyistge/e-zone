@@ -479,9 +479,11 @@ html, body {
 .index-footer .footerNav {
 	width: 1170px;
 	margin: auto;
+	overflow: hidden;
 }
 .index-footer .footerNav ul {
 	margin: 70px auto;
+	overflow: hidden;
 }
 .index-footer .footerNav li {
 	width: 260px;
