@@ -16,7 +16,7 @@ if ('ontouchstart' in window) {
 			closeMenu();
 		}
 	});
-	$('div.menu ul li a').on(click, function (e) {
+	$('div.menu div a').on(click, function (e) {
 		e.preventDefault();
 		closeMenu();
 	});
@@ -25,7 +25,7 @@ if ('ontouchstart' in window) {
 			$('div.circle').addClass('expand');
 			$('.HeadNavIco').addClass('open');
 			$('.x, .y, .z').addClass('collapse');
-			$('.menu li').addClass('animate');
+			$('.menu a').addClass('animate');
 			setTimeout(function () {
 				$('.y').hide();
 				$('.x').addClass('rotate30');
@@ -42,7 +42,7 @@ if ('ontouchstart' in window) {
 		$('.x').removeClass('rotate45').addClass('rotate30');
 		$('.z').removeClass('rotate135').addClass('rotate150');
 		$('div.circle').removeClass('expand');
-		$('.menu li').removeClass('animate');
+		$('.menu a').removeClass('animate');
 		setTimeout(function () {
 			$('.x').removeClass('rotate30');
 			$('.z').removeClass('rotate150');
