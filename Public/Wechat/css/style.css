@@ -300,6 +300,7 @@
 }
 .YzServiceIcoBox {
 	float: left;
+	margin-bottom: -1px;
 }
 .Noborder {
 	border-bottom:0px;
