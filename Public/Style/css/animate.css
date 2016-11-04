@@ -945,6 +945,11 @@
 	-moz-animation: rotateIn 1.5s ease both;
 	animation: rotateIn 1.5s ease both;
 }
+.active .rotateInx {
+	-webkit-animation: rotateIn 1.5s ease both;
+	-moz-animation: rotateIn 1.5s ease both;
+	animation: rotateIn 1.5s ease both;
+}
 @-webkit-keyframes hover {
  50% {
  -webkit-transform: translateY(-33px);

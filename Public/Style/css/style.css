@@ -472,7 +472,7 @@ html, body {
 .footer {
 	width: 100%;
 	height: 120px;
-	background: #d4d4d4;
+	background: #444a58;
 	text-align: center;
 	overflow: hidden;
 }
@@ -527,12 +527,12 @@ html, body {
 	font-size: 14px;
 }
 .footer .footerCopy,.footer .footerCopy a {
-	color: #9a9a9a;
+	color: #fff;
 	line-height: 50px;
 	font-size: 14px;
 }
 .footer .footeraddress {
-	color: #9a9a9a;
+	color: #fff;
 	height: 22px;
 	margin-top: 35px;
 }
@@ -542,7 +542,7 @@ html, body {
 .footer .footeraddress a {
 	padding-left: 5px;
 	height: 22px;
-	color: #9a9a9a;
+	color: #fff;
 	font-size: 16px;
 	vertical-align:middle
 }
