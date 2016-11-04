@@ -467,13 +467,14 @@ html, body {
 	width: 100%;
 	height: 265px;
 	background: #444a58;
+	overflow: hidden;
 }
 .footer {
 	width: 100%;
 	height: 120px;
 	background: #d4d4d4;
 	text-align: center;
-		overflow: hidden;
+	overflow: hidden;
 }
 .index-footer .footerNav {
 	width: 1170px;
