@@ -35,7 +35,7 @@ $(function () {
 		$("#navthree").find("span").css("-webkit-transform", "scaleX(1)").css("transform", "scaleX(1)");
     })
 	.mouseleave(function() {
-			$(".navfixedone").stop().slideUp(200);
+			$(".navfixedthree").stop().slideUp(200);
 			$("#navthree a").removeClass('colorone');
 			$(".active #navthree a").addClass('colortwo');
 			$("#navthree").find("span").css("-webkit-transform", "scaleX(0)").css("transform", "scaleX(0)");
