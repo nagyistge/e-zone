@@ -146,7 +146,16 @@ html, body {
 	z-index: 99;
 	display: none;
 }
-.navfixedone a,.navfixedtwo a {
+.navfixedthree {
+
+	position: absolute;
+	left: 122px;
+	top: 62px;
+	background: #fff;
+	z-index: 99;
+	display: none;
+}
+.navfixedone a,.navfixedtwo a,.navfixedthree a {
 	font-size: 15px;
 	padding: 10px 26px 10px 26px;
 	display: block;
@@ -157,6 +166,10 @@ html, body {
 	color: #fff;
 }
 .navfixedtwo a:hover {
+	background: #2a97c8;
+	color: #fff;
+}
+.navfixedthree a:hover {
 	background: #2a97c8;
 	color: #fff;
 }
