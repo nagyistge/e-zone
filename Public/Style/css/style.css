@@ -1412,3 +1412,16 @@ html, body {
 .float_qq li {
 	text-align: center;
 }
+.Popup {
+	position: absolute;
+	margin-top: -50px;
+}
+.Popup img {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	left: -50px;
+	top: -200px;
+	padding: 20px;
+	background: #ccc;
+}
