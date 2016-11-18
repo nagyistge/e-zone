@@ -243,6 +243,13 @@
 		margin-left: 0.546667rem;
 
 	}
+	.menu a.animate:nth-of-type(8){
+			top:8.133333333333333rem; /*610px*/
+			transition-delay: 0.17s;
+			width: 4.08rem;
+			margin-left: 0.546667rem;
+
+		}
 .Banner {
 	width: 10.0rem;
 }
