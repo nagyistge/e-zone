@@ -69,7 +69,7 @@ html, body {
 	height: 48px;
 	float: left;
 	line-height: 48px;
-	margin: auto 15px;
+	margin: auto 10px;
 		padding-bottom: 25px;
 }
 .navbar li a {
@@ -131,7 +131,7 @@ html, body {
 .navfixedone {
 
 	position: absolute;
-	left: 377px;
+	left: 417px;
 	top: 62px;
 	background: #fff;
 	z-index: 99;
@@ -140,7 +140,7 @@ html, body {
 .navfixedtwo {
 
 	position: absolute;
-	left: 502px;
+	left: 542px;
 	top: 62px;
 	background: #fff;
 	z-index: 99;
