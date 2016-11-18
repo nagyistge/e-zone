@@ -2,7 +2,7 @@
 	class IndexAction extends Action {
 
 		private $_indexModel = '';
-		private $_showNum = 2;
+		private $_showNum = 8;
 
 		public function __construct() {
 			parent::__construct();
