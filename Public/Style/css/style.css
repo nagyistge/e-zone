@@ -1415,6 +1415,7 @@ html, body {
 .Popup {
 	position: absolute;
 	margin-top: -50px;
+	display: none;
 }
 .Popup img {
 	width: 200px;

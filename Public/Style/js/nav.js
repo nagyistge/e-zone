@@ -6,6 +6,12 @@ $(window).on('load', function() {
 	});
 });
 $(function () {
+	$("#PopupOk").mouseenter(function() {
+		$(".Popup").fadeIn();
+	})
+	.mouseleave(function() {
+		$(".Popup").fadeOut();
+	});
 	$("#navone").mouseenter(function() {
 		$(".navfixedone").stop().slideDown(200);
 		$("#navone a").addClass('colorone');
