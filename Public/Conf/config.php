@@ -2,7 +2,7 @@
 	header('Content-Type:text/html; charset=utf-8');
 	error_reporting(E_ALL & ~E_NOTICE);
 	
-	define('DB_HOST', 'localhost');
+	define('DB_HOST', '221.180.149.179');
 	define('DB_USER', 'root');
 // 	define('DB_PWD', 'root');
 	define('DB_PWD', 'pjmishi@#$123');
