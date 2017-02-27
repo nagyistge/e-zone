@@ -2,10 +2,10 @@
 	header('Content-Type:text/html; charset=utf-8');
 	error_reporting(E_ALL & ~E_NOTICE);
 	
-	define('DB_HOST', '139.129.211.39');
+	define('DB_HOST', 'localhost');
 	define('DB_USER', 'root');
-	define('DB_PWD', 'KeYpZrZx');
-	define('DB_NAME', 'e-zone');
+	define('DB_PWD', 'pjmishi@#$123');
+	define('DB_NAME', 'e_zone');
 	define('DB_PREFIX', 'yz_');
 	
 	$conn = @mysql_connect(DB_HOST, DB_USER, DB_PWD) or die('数据库链接失败：'.mysql_error());
