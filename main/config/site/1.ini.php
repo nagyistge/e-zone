@@ -10,8 +10,8 @@ return array(
 	'SITE_LANGUAGE'           => 'zh-cn',  //系统语言设置，默认zh-cn
 	'SITE_TIMEZONE'           => '8',  //时区常量，默认时区为东8区时区
 	'SITE_THEME'              => 'default',  //模板风格,默认default
-	'SITE_NAME'               => '众众网络',  //网站名称，将显示在浏览器窗口标题等位置
-	'SITE_TITLE'              => '众众网络',  //网站首页SEO标题
+	'SITE_NAME'               => '北京亿众互动科技有限公司',  //网站名称，将显示在浏览器窗口标题等位置
+	'SITE_TITLE'              => '北京亿众互动科技有限公司',  //网站首页SEO标题
 	'SITE_KEYWORDS'           => '2222222',  //网站SEO关键字
 	'SITE_DESCRIPTION'        => '23333',  //网站SEO描述信息
 	'SITE_WATERMARK'          => '0',  //水印功能
