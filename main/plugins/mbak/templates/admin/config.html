@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="{ADMIN_THEME}images/reset.css" rel="stylesheet" type="text/css" />
+    <link href="{ADMIN_THEME}images/system.css" rel="stylesheet" type="text/css" />
+    <link href="{ADMIN_THEME}images/table_form.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{ADMIN_THEME}js/jquery.min.js"></script>
+    <title>admin</title>
+</head>
+<body style="font-weight: normal;">
+<div class="subnav">
+	<div class="content-menu ib-a blue line-x">
+		{$menu}
+	</div>
+	<div class="bk10"></div>
+	<div class="explain-col">
+		<font color="red">
+		请将【/plugin/mbak/】目录设置可读写权限。<br>
+        FineCMS备份文件只能在相同版本中恢复，比如升级前的备份数据，升级后这些备份数据就不能进行恢复，否则系统会出错的。
+		</font>
+	</div>
+	<div class="bk10"></div>
+	<div class="table-list col-tab">
+        <ul class="tabBut cu-li">
+            <li class="on">安全设置</li>
+        </ul>
+        <div class="contentList pad-10">
+		<form action="" method="post" id="myform" name="myform">
+		<table width="100%" class="table_form">
+		<tr>
+			<th width="200">重命名系统目录：</th>
+			<td><input type="text" class="input-text" value="{$dir}" name="name">
+			{if $error}<div class="onError">{$error}</div>{/if}
+			</td>
+		</tr>
+		<tr>
+			<th> </th>
+			<td><input value="执行" type="submit" name="submit" class="button" onclick="$('#load').show()" />
+			<span id="load" style="display:none;color:red">正在执行，请稍后...</span>
+			</td>
+		</tr>
+		</table>
+		</form>
+	</div>
+	</div>
+</div>
+</body>
+</html>

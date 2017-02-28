@@ -1,0 +1,12 @@
+# BEGIN
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+# END
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^pjmishi.com [NC] 
+RewriteRule ^(.*)$ http://www.pjmishi.com/$1 [L,R=301] 
+
+
+
+

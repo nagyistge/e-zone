@@ -1,0 +1,7 @@
+RewriteEngine   on
+RewriteCond %{HTTP_HOST} ^(www.)?pjmishi.com$
+RewriteRule ^(/)?$ pjmishi/index.html [L]
+
+
+
+
