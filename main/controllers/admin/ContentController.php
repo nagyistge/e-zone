@@ -186,6 +186,8 @@ class ContentController extends Admin {
             'tpl' => !is_file(VIEW_DIR.'admin/'.$table.'.html') ? 'admin/content_default' : 'admin/'.$table,
             'diy_file' => is_file(VIEW_DIR.'admin/'.$table.'.html') ? '' : '/views/admin/'.$table.'.html',
 	    ));
+        
+        dump(123);
 	    $this->view->display('admin/content_list');
 	}
 	
