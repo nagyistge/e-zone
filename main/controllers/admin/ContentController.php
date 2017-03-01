@@ -182,12 +182,11 @@ class ContentController extends Admin {
 			'modelid' => $modelid,
 			'recycle' => $recycle,
 	        'pagelist' => $pagelist,
-	        'category' => $this->tree->get_model_tree($this->cats, 0, null, '|-', $modelid),
+	        //'category' => $this->tree->get_model_tree($this->cats, 0, null, '|-', $modelid),
+        		'category' => null,
             'tpl' => !is_file(VIEW_DIR.'admin/'.$table.'.html') ? 'admin/content_default' : 'admin/'.$table,
             'diy_file' => is_file(VIEW_DIR.'admin/'.$table.'.html') ? '' : '/views/admin/'.$table.'.html',
 	    ));
-        
-        dump(123);
 	    $this->view->display('admin/content_list');
 	}
 	
